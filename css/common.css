@@ -1,0 +1,385 @@
+/* 版心 inner_c*/
+
+.container {
+    margin: 0 auto;
+    width: 1140px;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+ol {
+    list-style: none;
+}
+
+
+/* header start */
+
+.header {
+    position: relative;
+    height: 68px;
+    width: 100%;
+    border-bottom: 1px solid #333;
+    box-shadow: 5px 0px 5px 0px rgba(0, 0, 0, .5);
+    line-height: 68px;
+    text-align: center;
+}
+
+
+/* logo */
+
+.header h1 {
+    float: left;
+    margin: 0 15px;
+    width: 140px;
+}
+
+.header h1 a {
+    display: block;
+    font-size: 0;
+    background: url(../images/logo.png) no-repeat center;
+}
+
+
+/* check all  */
+
+.check_all {
+    float: left;
+    width: 168px;
+    margin-left: 10px;
+    transition: all 0.5s;
+}
+
+.check_all:hover {
+    background-color: #e6d6c6;
+}
+
+
+/*小三角*/
+
+.check_all i {
+    display: inline-block;
+    width: 0px;
+    height: 0px;
+    border: 5px solid transparent;
+    border-top-color: black;
+    margin-left: 7px;
+}
+
+.check_all:hover i {
+    border-color: transparent;
+    border-bottom-color: black;
+    transform: translateY(-50%);
+}
+
+
+/* dropDown big box*/
+
+.drop_down {
+    position: absolute;
+    top: 69px;
+    left: 0;
+    width: 100%;
+    padding-top: 20px;
+    background-color: white;
+    display: none;
+    z-index: 2;
+}
+
+.check_all:hover .drop_down {
+    display: block;
+}
+
+.all_type {
+    text-align: left;
+    padding-left: 360px;
+}
+
+
+/*  drop_down left side box  */
+
+.all_type .type_list {
+    float: left;
+    width: 168px;
+    padding-top: 30px;
+}
+
+.all_type .type_list li {
+    line-height: 50px;
+    text-align: center;
+}
+
+.type_list li a:hover {
+    color: #e6d6c6;
+}
+
+.current {
+    color: #e6d6c6;
+}
+
+
+/* drop_down right side box  */
+
+.all_type .type_detail {
+    float: left;
+    width: 750px;
+    margin-left: 65px;
+}
+
+.product_common {
+    position: relative;
+    height: 340px;
+    width: 250px;
+    float: left;
+    text-align: center;
+}
+
+
+/* prodect items common （.product_common ）*/
+
+
+/* mask */
+
+.product_common::before {
+    content: "详细信息";
+    display: none;
+    width: 150px;
+    height: 50px;
+    color: white;
+    font-size: 23px;
+    line-height: 50px;
+    background-color: #e9a72c;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 333;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+}
+
+.product_common::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 22;
+    content: "";
+    display: none;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, .2);
+}
+
+.product_common:hover::before,
+.product_common:hover::after {
+    display: block;
+}
+
+
+/* product img */
+
+.product_common .product_pic {
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+}
+
+.product_common .product_pic img {
+    width: 100%;
+    transform: scale(1.1);
+    transition: all 1s;
+}
+
+.product_common:hover img {
+    transform: scale(1.5);
+}
+
+
+/* product infomation */
+
+.type_detail .product_info {
+    margin-top: -20px;
+}
+
+.product_info p,
+.product_info span {
+    font-size: 14px;
+    height: 30px;
+}
+
+.product_info span {
+    color: crimson
+}
+
+
+/* header_nav start */
+
+.header_nav {
+    float: left;
+}
+
+.header_nav li {
+    float: left;
+}
+
+.header_nav li a {
+    display: block;
+    padding: 0 25px;
+    transition: all 0.5s;
+}
+
+.header_nav li:hover {
+    background-color: #e6d6c6;
+}
+
+
+/* header_nav end */
+
+
+/* search */
+
+.header .search {
+    position: relative;
+    float: left;
+    width: 145px;
+    height: 68px;
+}
+
+.header .search input {
+    outline: none;
+}
+
+.header .search_icon {
+    position: absolute;
+    top: 50%;
+    left: 175px;
+    transform: translateY(-50%);
+    display: block;
+    width: 20px;
+    height: 20px;
+    background: url(../images/img00.png) no-repeat center;
+}
+
+
+/* login box */
+
+.login {
+    float: left;
+    margin-left: 90px;
+}
+
+.login a {
+    padding: 0 5x
+}
+
+.cart {
+    display: inline-block;
+    background: url(../images/0.png) no-repeat center;
+    padding-left: 60px;
+    cursor: pointer;
+    position: relative;
+}
+
+.cart:hover .crat_content {
+    display: block;
+}
+
+.cart>a {
+    color: crimson;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+
+/* drop_down */
+
+.crat_content {
+    position: absolute;
+    top: 70px;
+    right: 0;
+    width: 250px;
+    height: 150px;
+    background-color: #f4f4f4;
+    box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, .5);
+    padding: 20px;
+    display: none;
+}
+
+.crat_content p {
+    margin-top: 10px;
+}
+
+.crat_content span {
+    color: crimson;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.crat_content a {
+    display: block;
+    width: 150px;
+    height: 50px;
+    color: white;
+    font-size: 23px;
+    line-height: 50px;
+    background-color: #e9a72c;
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+
+/* cart */
+
+
+/* header end */
+
+
+/* title common */
+
+.title_common {
+    height: 140px;
+    width: 100%;
+    text-align: center;
+    margin: 40px 0;
+}
+
+.title_common h2 {
+    font-size: 40px;
+    font-weight: 700;
+    color: #3f3f3f;
+}
+
+.title_common p {
+    margin-top: 20px;
+    font-size: 20px;
+    color: #999;
+}
+
+
+/* arrows */
+
+.btns a {
+    display: block;
+    position: absolute;
+    top: 50%;
+    z-index: 222;
+    transform: translateY(-50%);
+    height: 100px;
+    width: 50px;
+    text-align: center;
+    font-size: 60px;
+    font-weight: 700;
+    color: #999;
+    cursor: pointer;
+}
+
+.btns .arrow_left {
+    left: 60px;
+}
+
+.btns .arrow_right {
+    right: 60px;
+}
