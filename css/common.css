@@ -10,7 +10,8 @@ a {
     color: #333;
 }
 
-ol {
+ol,
+li {
     list-style: none;
 }
 
