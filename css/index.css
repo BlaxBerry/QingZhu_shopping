@@ -1,0 +1,211 @@
+/* 版心 inner_c*/
+
+.container {
+    margin: 0 auto;
+    width: 1140px;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+
+/* header start */
+
+.header {
+    position: relative;
+    height: 68px;
+    width: 100%;
+    border-bottom: 1px solid #333;
+    box-shadow: 5px 0px 5px 0px rgba(0, 0, 0, .5);
+    line-height: 68px;
+    text-align: center;
+}
+
+
+/* logo */
+
+.header h1 {
+    float: left;
+    margin: 0 15px;
+    width: 140px;
+}
+
+.header h1 a {
+    display: block;
+    font-size: 0;
+    background: url(../images/logo.png) no-repeat center;
+}
+
+
+/* check all  */
+
+.check_all {
+    float: left;
+    width: 168px;
+    margin: 0 10px;
+    transition: all 0.5s;
+}
+
+.check_all:hover {
+    background-color: #e6d6c6;
+}
+
+
+/*小三角*/
+
+.check_all i {
+    display: inline-block;
+    width: 0px;
+    height: 0px;
+    border: 5px solid transparent;
+    border-top-color: black;
+}
+
+.check_all:hover i {
+    border-color: transparent;
+    border-bottom-color: black;
+    transform: translateY(-50%);
+}
+
+
+/* dropDown big box*/
+
+.drop_down {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    padding-top: 20px;
+    background-color: white;
+    display: none;
+}
+
+.check_all:hover .drop_down {
+    display: block;
+}
+
+.all_type {
+    text-align: left;
+    padding-left: 360px;
+}
+
+
+/*  drop_down left side box  */
+
+.all_type .type_list {
+    float: left;
+    width: 168px;
+    padding-top: 45px;
+}
+
+.all_type .type_list li {
+    line-height: 50px;
+    text-align: center;
+}
+
+.type_list li a:hover {
+    color: #e6d6c6;
+}
+
+.current {
+    color: #e6d6c6;
+}
+
+
+/* drop_down right side box  */
+
+.all_type .type_detail {
+    float: left;
+    width: 750px;
+    margin-left: 65px;
+}
+
+.all_type .type_detail li {
+    position: relative;
+    height: 340px;
+    width: 250px;
+    float: left;
+    text-align: center;
+}
+
+
+/* mask */
+
+.type_detail li::before {
+    content: "More";
+    display: none;
+    width: 150px;
+    height: 50px;
+    color: white;
+    font-size: 23px;
+    line-height: 50px;
+    background-color: #e9a72c;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 333;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+}
+
+.type_detail li::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 22;
+    content: "";
+    display: none;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, .3);
+}
+
+.all_type .type_detail li:hover::before,
+.all_type .type_detail li:hover::after {
+    display: block;
+}
+
+
+/* product img */
+
+.type_detail .product_pic {
+    width: 250px;
+    height: 250px;
+    overflow: hidden;
+}
+
+.type_detail .product_pic img {
+    width: 100%;
+    transition: all 1s;
+}
+
+.all_type .type_detail li:hover img {
+    transform: scale(1.2);
+}
+
+
+/* product infomation */
+
+.product_info {
+    margin-top: -10px;
+}
+
+.product_info p,
+.product_info span {
+    font-size: 14px;
+    height: 30px;
+}
+
+.product_info span {
+    color: #b40606;
+}
+
+
+/* prodect items common*/
+
+.product_common {}
+
+
+/* header end */
