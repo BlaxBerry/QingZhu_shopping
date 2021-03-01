@@ -161,10 +161,17 @@
     .recommed_pro_content .right .product_common {
         width: 230px;
         height: 310px;
+        margin-bottom: 5px;
     }
     
     .recommed_pro_content .right .product_common .product_info {
-        margin-top: -5px;
+        margin-top: 35px;
+    }
+    
+    .recommed_pro_content .right .product_common .product_pic {
+        width: 100%;
+        height: 200px;
+        overflow: hidden;
     }
     /* recommed_products end */
     /* global start */

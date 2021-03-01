@@ -1,0 +1,213 @@
+body {
+    background: #f5f5f5;
+}
+
+
+/* main start */
+
+.main {
+    margin-top: 68px;
+}
+
+.main .container {
+    padding: 0 20px;
+    background: white;
+}
+
+
+/* top nav  */
+
+.main .topnav {
+    padding: 30px 0 10px;
+    border-bottom: 1px #ddd solid;
+}
+
+.main .topnav span {
+    margin: 0 5px;
+}
+
+.main .topnav a {
+    font-size: 14px;
+    color: #444;
+}
+
+
+/* top nav end */
+
+
+/* nav bar start table */
+
+.main .nav_bar {
+    padding-top: 10px;
+    overflow: hidden;
+}
+
+table {
+    width: 100%;
+    border: solid 1px #ddd;
+    border-collapse: collapse;
+    font-size: 14px;
+}
+
+table td {
+    border: solid 1px #ddd;
+    padding: 20px 0;
+    padding-left: 30px;
+}
+
+table th {
+    text-align: center;
+    width: 150px;
+}
+
+table .row_2 {
+    background-color: #e9e9e9;
+}
+
+table td a {
+    padding: 0 20px;
+}
+
+
+/* nav bar end */
+
+
+/* content start */
+
+.main .content {
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+
+/* detail bar start */
+
+.detail {
+    padding: 10px;
+    height: 60px;
+    line-height: 60px;
+}
+
+
+/* .leftside */
+
+.detail .leftside {
+    float: left;
+    margin-right: 40px;
+    font-size: 12px;
+    color: #444;
+}
+
+.detail .leftside span {
+    padding: 0 20px;
+}
+
+.detail .leftside span.type {
+    border: 1px solid #ddd;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.detail .leftside span.type i {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    vertical-align: middle;
+    margin-left: 10px;
+}
+
+.detail .leftside span.type:nth-child(2) i {
+    background: url(../images/ico1.png)no-repeat center;
+}
+
+.detail .leftside span.type:nth-child(3) i {
+    background: url(../images/ico2.png)no-repeat center;
+}
+
+.detail .leftside span.type:nth-child(4) i {
+    background: url(../images/ico3.png)no-repeat center;
+}
+
+
+/* .rightside */
+
+.detail .rightside {
+    float: right;
+    font-size: 12px;
+    color: #444;
+}
+
+.detail .rightside span {
+    font-weight: 700;
+    color: crimson;
+}
+
+.detail .btnselect {
+    float: left;
+    position: relative;
+    font-size: 12px;
+    color: #444;
+}
+
+
+/* detail IOS button */
+
+.detail .btnselect .btn {
+    margin-left: 5px;
+    float: right;
+    background-color: darkgray;
+    border-radius: 20px;
+    width: 80px;
+    height: 35px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    overflow: hidden;
+}
+
+.detail .btnselect .btn input {
+    visibility: hidden;
+    width: 100%;
+}
+
+.detail .btnselect .btn input::after {
+    content: '';
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: white;
+    visibility: visible;
+    transition: all 0.3s;
+}
+
+.detail input:checked::after {
+    transform: translateX(45px);
+}
+
+.detail input::before {
+    visibility: visible;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: all 0.5s;
+}
+
+.detail input:checked::before {
+    background-color: rgb(110, 224, 110);
+}
+
+
+/* IOS button end */
+
+
+/* content products */
+
+.main .content ul .product_common {
+    width: 285px;
+}
