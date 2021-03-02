@@ -6,24 +6,32 @@
     
     .slider {
         margin-top: 68px;
-        height: 470px;
+        height: 398px;
+        overflow: hidden;
         position: relative;
     }
     
+    .slider ul {
+        width: 300%;
+    }
+    
     .slider ul li {
+        height: 398px;
+    }
+    /* .slider ul li {
         position: absolute;
         height: 100px;
         top: 0;
         left: 0;
         display: none;
-    }
+    } */
     
     .slider ul li.current {
         display: block;
     }
     
     .slider ul li img {
-        width: 100%;
+        height: 100%;
     }
     /* btns  */
     
