@@ -9,6 +9,7 @@
         height: 398px;
         overflow: hidden;
         position: relative;
+        background-color: rgb(238, 238, 238);
     }
     
     .slider ul {
@@ -17,6 +18,9 @@
     
     .slider ul li {
         height: 398px;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
     }
     /* .slider ul li {
         position: absolute;

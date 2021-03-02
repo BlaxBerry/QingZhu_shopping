@@ -11,11 +11,13 @@ window.addEventListener('load', function() {
 
         let num = 1;
 
-        //right arrow --->
+        // 1. right arrow --->
         right.on('click', () => {
-            // clearInterval(timer);
+            // clear timer
+            clearInterval(timer);
+
             lis.hide();
-            //把DOM对象---》jquery对象
+            //DOM obj ————> jQuery obj
             $(lis[num]).fadeIn(1000);
             num++;
             if (num == 4) {
@@ -25,12 +27,13 @@ window.addEventListener('load', function() {
             //little buttons
             $(ol_li).removeClass('current')
             $(ol_li[num - 1]).addClass('current')
-
         })
 
-        //left arrow  <-----
+        // 2. left arrow  <-----
         left.on('click', () => {
-            // clearInterval(timer);
+            // clear timer
+            clearInterval(timer);
+
             lis.hide();
 
             if (num == 1) {
@@ -44,29 +47,39 @@ window.addEventListener('load', function() {
             $(ol_li[num - 1]).addClass('current')
         })
 
+        // 3. timer 自动播放
         let timer = setInterval(() => {
-            left.click();
-        }, 3000)
+            lis.hide();
+            //DOM obj ————> jQuery obj
+            $(lis[num]).fadeIn(1000);
+            num++;
+            if (num == 4) {
+                num = 1
+            }
+            //little buttons
+            $(ol_li).removeClass('current')
+            $(ol_li[num - 1]).addClass('current')
+
+        }, 5000)
 
 
 
+        // 4. 小圆点  littel buttons
 
-        //小圆点  littel buttons
-        // create li 
+        // get ol
         let ol = $('.slider ol');
 
+        // create li 
         for (let i = 0; i < lis.length - 1; i++) {
             let li = $('<li></li>');
-
-
             ol.append(li);
         }
+
         //litte buttons
         let ol_li = $('.slider ol li');
 
-
-
-
+        // the first li current
+        $(ol_li[num - 1]).addClass('current')
 
 
 
