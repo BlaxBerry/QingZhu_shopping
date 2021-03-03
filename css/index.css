@@ -53,6 +53,7 @@
         background-color: white;
         margin: 0 10px;
         cursor: pointer;
+        transition: all 1s;
     }
     
     .slider ol li.current {
@@ -62,8 +63,9 @@
     /* new_pro start*/
     
     .new_products .new_pro_content {
-        height: 360px;
+        height: 340px;
         position: relative;
+        background-color: rgb(253, 251, 251);
     }
     
     .new_pro_content .product_common {
