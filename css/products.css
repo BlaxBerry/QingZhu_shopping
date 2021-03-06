@@ -208,6 +208,10 @@ table td a {
 
 /* content products */
 
-.main .content ul .product_common {
+.productsList ul .product_common {
     width: 285px;
+}
+
+.productsList ul .product_common .product_info {
+    margin-top: 15px;
 }
