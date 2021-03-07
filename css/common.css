@@ -107,17 +107,14 @@ li {
 
 .all_type .type_list {
     float: left;
+    transform: translateY(10%);
     width: 168px;
-    padding-top: 30px;
 }
 
 .all_type .type_list li {
     line-height: 50px;
     text-align: center;
-}
-
-.type_list li a:hover {
-    color: #e6d6c6;
+    margin-top: 10px;
 }
 
 .current {
@@ -129,8 +126,11 @@ li {
 
 .all_type .type_detail {
     float: left;
+    height: 340px;
     width: 750px;
     margin-left: 35px;
+    overflow: hidden;
+    margin-top: 20px;
 }
 
 .product_common {

@@ -68,6 +68,14 @@
         background-color: rgb(253, 251, 251);
     }
     
+    .new_products .new_pro_content .new_pro_slide_bar {
+        overflow: hidden;
+    }
+    
+    .new_products .new_pro_content ul {
+        width: 200%;
+    }
+    
     .new_pro_content .product_common {
         width: 285px;
     }
